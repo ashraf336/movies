@@ -1,15 +1,24 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import { StyleSheet, View } from "react-native";
+import ResultList from "./src/components/ResultList";
+import useResult from "./src/hooks/useResult";
+
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
 
+  //useResult() : A Hook that Returns the needed States and Functions
+  const [result,getMorePages,isLoading] = useResult();
+
+  return (
+    <>
+      <View style={{flex:1}}>
+        <ResultList  result={result} moreData={getMorePages} isLoading={isLoading}/>
+      </View>
+    </>
+  );
+};
+
+ // Styling components
 const styles = StyleSheet.create({
   container: {
     flex: 1,
