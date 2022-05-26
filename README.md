@@ -23,10 +23,13 @@ Assuming that you have Node 14 LTS or greater installed, you can use npm to inst
 ```
 npm install -g expo-cli
 ```
-Now download the project dependencies and start a local server using the following lines: 
+Now download the project dependencies:
 ```
-$ npm install
-$ npm start
+npm install
+```
+Then,start a local server using the following line:
+```
+npm start
 ```
 Running your React Native application:
 Install the Expo client app on your iOS or Android phone and connect to the same wireless network as your computer. On Android, use the Expo app to scan the QR code from your terminal to open your project. On iOS, use the built-in QR code scanner of the Camera app.
